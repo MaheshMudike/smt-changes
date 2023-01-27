@@ -1,0 +1,36 @@
+.separated {
+    @mixin thin-border($side, $color) {
+        $border-side: 'border-#{$side}';
+        #{$border-side}: 1px solid $color;
+    }
+
+    @include thin-border(bottom, $grey4);
+
+    &--bottom-dark {
+        @include thin-border(bottom, $grey4);
+    }
+
+    &--bottom-light {
+        @include thin-border(bottom, $grey3);
+    }
+
+    &--top-light {
+        @include thin-border(top, $grey3);
+    }
+
+    &--top-dark {
+        @include thin-border(top, $grey4);
+    }
+
+    &--right-dark {
+        @include thin-border(right, $grey4);
+    }
+
+    &--vertical-light {
+        @include thin-border(left, $grey3);
+
+        &:first-child {
+            @include thin-border(left, transparent);
+        }
+    }
+}

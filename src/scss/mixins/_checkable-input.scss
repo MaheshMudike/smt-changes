@@ -1,0 +1,43 @@
+$checkable-input-size: 18px;
+$checkable-label-padding: 52px;
+$checkable-input-border: 2px;
+$checkable-color: $light-blue;
+$checkable-border-color: $dark-grey1;
+
+@mixin checkable-input() {
+    position: relative;
+
+    > input {
+        display: none;
+
+        &:checked {
+            ~ label::before {
+                border-color: $checkable-color;
+            }
+        }
+    }
+
+    > label {
+        display: block;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin: -1px 0;
+            transform: translate(0, -$checkable-input-size/2);
+            transition-duration: .3s;
+            content: '';
+        }
+
+        &::before {
+            width: $checkable-input-size;
+            height: $checkable-input-size;
+            border: $checkable-input-border solid $checkable-border-color;
+            background-color: $white;
+        }
+    }
+}

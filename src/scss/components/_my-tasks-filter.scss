@@ -1,0 +1,16 @@
+.my-tasks-filter {
+    font-size: $font-size--xxxs;
+    text-align: center;
+    text-transform: uppercase;
+
+    &__caption {
+        vertical-align: middle;
+    }
+
+    &__badge {
+        float: right;
+        @include rtl() {
+            float: left;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.my-tasks-badge {
+    position: absolute;
+    top: rem(-4);
+    right: rem(-4);
+    z-index: z-index(content);
+
+    @include rtl() {
+        left: rem(-4);
+        right: auto;
+    }
+
+    &__container {
+        position: relative;
+    }
+}

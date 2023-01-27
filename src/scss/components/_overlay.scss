@@ -1,0 +1,24 @@
+@keyframes delayed-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .8;
+    }
+}
+
+.overlay {
+    background-color: $white;
+    opacity: .8;
+    z-index: z-index(content-above);
+
+    animation-name: delayed-fade-in;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: .6s;
+}

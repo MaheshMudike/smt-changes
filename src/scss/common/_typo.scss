@@ -1,0 +1,43 @@
+html,
+body,
+.smt-app {
+    height: 100%;
+    color: $dark-grey2;
+    font: 16px 'Open Sans';
+    -webkit-font-smoothing: antialiased;
+}
+
+.smt-app {
+    background-image: $blue-gradient;
+}
+
+h1 {
+    font-size: $font-size--xxl;
+}
+
+h2 {
+    font-size: $font-size--xl;
+}
+
+.font-size--s {
+    font-size: $font-size--s;
+}
+
+.font-size--xs {
+    font-size: $font-size--xs;
+}
+
+.bold {
+    font-family: OpenSans-Bold, sans-serif;
+}
+
+.blue-header {
+    @extend .bold;
+    color: $dark-blue;
+    font-size: $font-size--xl;
+
+    &--small {
+        font-size: $font-size--xs;
+        text-transform: uppercase;
+    }
+}

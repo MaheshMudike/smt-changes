@@ -1,0 +1,26 @@
+.empty-view {
+    &--grey {
+        background-color: $grey1;
+    }
+
+    &__icon {
+        width: rem(80);
+        height: rem(80);
+        opacity: .35; // Since we are using svg with img, we are not able to change the fill property
+    }
+
+    &__title {
+        margin: $size-tiny 0;
+        color: $dark-grey2;
+        font-family: $font-bold;
+        font-size: $font-size--xxxs;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        max-width: rem(175);
+        color: $dark-grey1;
+        font-size: $font-size--xs;
+        text-align: center;
+    }
+}

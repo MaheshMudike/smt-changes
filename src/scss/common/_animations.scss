@@ -1,0 +1,158 @@
+@mixin transform($transform)
+{
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	transform: $transform;
+}
+
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+      @content; 
+    }
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    } 
+}
+
+.fade-in {
+    @include animation(fade-in 300ms ease);
+    //animation: fade-in 300ms ease;
+}
+
+
+@include keyframes(fade-in) {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: inline-block;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@include keyframes(spin) {
+    from {
+        @include transform(rotate(365deg));
+        //transform: rotate(0deg);
+    }
+
+    to {
+        @include transform(rotate(0deg));
+        //transform: rotate(359deg);
+    }
+}
+
+.spin {
+    @include animation(spin 800ms linear 0ms infinite);
+    /*
+    animation-name: spin;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    */
+}
+
+.spin-end {
+    @include animation(spin 800ms linear 0ms 1);
+    /*
+    animation-name: spin;
+    animation-duration: 800ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    */
+}
+
+
+.spinner {
+    display: block;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+
+    margin: 0 auto;
+
+    .before,
+    .after,
+    //&:before,
+    //&:after 
+        {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $light-blue;
+        content: '';
+        opacity: .6;
+
+        @include animation(animation-bounce 2s infinite ease-in-out);
+        /*
+        -webkit-animation: animation-bounce 2s infinite ease-in-out;
+        animation: animation-bounce 2s infinite ease-in-out;
+        */
+    }
+
+    .after,
+    //&:after 
+    {
+        background-color: $medium-blue;
+        -webkit-animation-delay: -1s;
+        animation-delay: -1s;
+    }
+
+    &--light {
+        .before,
+        //&:before 
+        {
+            background-color: $white;
+        }
+
+        .after,
+        //&:after 
+        {
+            background-color: $grey1;
+        }
+    }
+
+    &--small {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@include keyframes(animation-bounce) {
+    0% {
+        @include transform(scale(0));        
+    }
+
+    50% {
+        @include transform(scale(1));        
+    }
+
+    100% {
+        @include transform(scale(0));
+    }
+}

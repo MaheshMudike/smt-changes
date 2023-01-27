@@ -1,0 +1,26 @@
+.list-tile {
+    display: flex;
+    min-height: $size-larger;
+    padding: 0 $padding-std;
+
+    &__title {
+        color: $dark-grey2;
+        font-size: $font-size--s;
+    }
+
+    &__sub-title {
+        color: $dark-grey1;
+        font-size: $font-size--xs;
+    }
+
+    &__secondary-content {
+        margin-left: auto;
+
+        &__text {
+            color: $dark-grey1;
+            font-family: OpenSans-Bold;
+            font-size: $font-size--xxs;
+            text-transform: uppercase;
+        }
+    }
+}

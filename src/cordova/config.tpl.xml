@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="${APP_ID}" version= "2.1.14" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>${APP_NAME}</name>
+    <description>
+        KONE SMT 3 App
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Fluido
+    </author>
+    <content src="indexCordova.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon density="mdpi" src="icons/android/mdpi/ic_launcher_APP.png" />
+        <icon density="hdpi" src="icons/android/hdpi/ic_launcher_APP.png" />
+        <icon density="xhdpi" src="icons/android/xhdpi/ic_launcher_APP.png" />
+        <icon density="xxhdpi" src="icons/android/xxhdpi/ic_launcher_APP.png" />
+        <icon density="xxxhdpi" src="icons/android/xxxhdpi/ic_launcher_APP.png" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-globalization" spec="^1.0.8" />
+    <plugin name="cordova-plugin-camera" spec="^3.0.0" />
+    <plugin name="cordova-plugin-secure-storage-3" spec="^0.0.2" />
+    <plugin name="com.lampa.startapp" spec="^6.1.4" />
+    <plugin name="cordova-plugin-dialogs" spec="^1.3.4" />
+    <plugin name="cordova-plugin-device" spec="^2.0.1" />
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
+    <plugin name="cordova-plugin-file-opener2" spec="^2.0.19" />
+    <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="AndroidExtraFilesystems" value="files,cache, sdcard, cache-external, files-external" />
+    <engine name="browser" spec="~5.0.3" />
+    <engine name="android" spec="~7.0.0" />
+    <plugin name="cordova-plugin-inappbrowser" spec="~3.0.0" />
+</widget>

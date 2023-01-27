@@ -1,0 +1,172 @@
+.report-container {
+    position: relative;
+    margin: auto rem(38) rem(38);
+    font-family: Sans-serif;
+}
+
+#report {
+    background-color: white;
+    border: 1px solid $grey4;
+}
+
+#report-header {
+  font-size: rem(30);
+  /*margin-top: 0.8rem;*/
+}
+
+.report-print-button {
+  float: right;  
+  color: white;
+  margin-top: $padding-std;
+  margin-right: $padding-std;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $light-blue;
+  font-size: .8em;
+
+  @include rtl() {
+    margin-right: 0;
+    margin-left: $padding-std;
+    float: left;
+  }
+}
+
+@media print {
+  .report-print-button {
+    display: none;
+  }
+}
+////////////////////////////
+
+.report-header {
+    height: rem(56);
+    padding: rem(28) rem(16) rem(11) 0;
+    /*border-bottom: 1px solid $grey3;*/
+    color: $light-blue;
+    font-size: rem(18);
+    font-weight: 600;
+    line-height: rem(16);
+
+    &--small {
+        padding: rem(18) rem(16) rem(11) 0;
+        border-bottom: 0;
+        font-size: rem(14);
+        font-weight: 600;
+        line-height: rem(14);
+    }
+}
+
+//TODO added for the tabs
+
+@media print {
+  .topbar { display: none; }
+  .main-container__content { top: 0; transform: none; }
+  .sidebar { display: none; }  
+  #report { 
+    width:100%; 
+    height:100%;
+    page-break-after:always 
+  }
+}
+
+.accordion-tabs {
+    $base-border-color: #dcdcdc !default;
+    $base-border-radius: 3px !default;
+    $base-background-color: #fff !default;
+    $base-spacing: 1.5em !default;
+    $action-color: #477dca !default;
+    $dark-gray: #333 !default;
+    $light-gray: #ddd !default;
+    $medium-screen: 40em !default;
+    $tab-border: 1px solid $base-border-color;
+    $tab-content-background: lighten($light-gray, 10);
+    $tab-active-background: $tab-content-background;
+    $tab-inactive-color: $base-background-color;
+    $tab-inactive-hover-color: darken($light-gray, 5);
+    $tab-mode: $medium-screen;
+  
+    @include clearfix;
+    line-height: 1.5;
+    margin-top: $base-spacing;
+    padding: 0;
+  
+    @include media(max-width $tab-mode) {
+      border: $tab-border;
+      border-radius: $base-border-radius;
+    }
+  
+    .tab-header-and-content {
+      list-style: none;
+  
+      @include media($tab-mode) {
+        display: inline;
+      }
+  
+      &:first-child .tab-link {
+        border-top-left-radius: $base-border-radius;
+        border-top-right-radius: $base-border-radius;
+  
+        @include media(max-width $tab-mode) {
+          border-top: 0;
+        }
+      }
+  
+      &:last-child .tab-link {
+        @include media(max-width $tab-mode) {
+          border-bottom-left-radius: $base-border-radius;
+          border-bottom-right-radius: $base-border-radius;
+        }
+      }
+    }
+  
+    .tab-link {
+      background-color: $tab-inactive-color;
+      border-top: $tab-border;
+      color: $dark-gray;
+      display: block;
+      font-weight: bold;
+      padding: ($base-spacing / 2) ($gutter / 2);
+      text-decoration: none;
+  
+      @include media($tab-mode) {
+        @include border-top-radius($base-border-radius);
+        border-top: 0;
+        display: inline-block;
+      }
+  
+      &:hover {
+        color: $action-color;
+      }
+  
+      &:focus {
+        outline: none;
+      }
+  
+      &.is-active {
+        background-color: $tab-active-background;
+  
+        @include media($tab-mode) {
+          background-color: $tab-active-background;
+          border: $tab-border;
+          border-bottom-color: $tab-active-background;
+          margin-bottom: -1px;
+        }
+      }
+    }
+  
+    .tab-content {
+      background: $tab-content-background;
+      display: none;
+      padding: $base-spacing $gutter;
+      width: 100%;
+  
+      @include media($tab-mode) {
+        border: $tab-border;
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+        border-top-right-radius: $base-border-radius;
+        float: left;
+      }
+    }
+  }

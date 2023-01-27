@@ -1,0 +1,11 @@
+.datetime {
+
+    &__separator {
+        box-shadow: 9px 0 0 -8px $grey4;
+
+        
+        @include rtl() {
+            box-shadow: -9px 0 0 -8px $grey4;
+        }
+    }
+}

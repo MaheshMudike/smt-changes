@@ -1,0 +1,7 @@
+.page-container {
+    @extend .full-height;
+    @extend .padding--large;
+    @extend .container--vertical;
+
+    background-color: $grey1;
+}

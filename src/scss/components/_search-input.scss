@@ -1,0 +1,23 @@
+.search-input-container {
+    padding: 0 $padding-small;    
+}
+
+.search-input {
+    border: 0;
+    background-color: transparent;
+    color: $white;
+    font-family: 'OpenSans-Bold';
+    font-size: $font-size--xl;
+
+    &::placeholder {
+        color: $white;
+        opacity: .5;
+    }
+}
+
+#search-filters {
+    background-color: #f7f9fa;
+    height: auto;
+    line-height: normal;
+    border-bottom: 1px solid #ebeced;
+}

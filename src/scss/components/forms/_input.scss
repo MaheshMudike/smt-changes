@@ -1,0 +1,26 @@
+input[type='text'],
+input[role='combobox'],
+input[type='date'],
+input[type='email'],
+input[type='time'],
+textarea {
+    @extend .field;
+
+    background-color: transparent;
+
+    &::placeholder {
+        @extend .placeholder
+    }
+
+    &.invalid {
+        box-shadow: inset -5px 0 0 -2px #c11b1b;
+    }
+}
+
+.Select.invalid {
+    box-shadow: inset -5px 0 0 -2px #c11b1b;
+}
+
+textarea {
+    padding: $padding-decreased $padding-std;
+}

@@ -1,0 +1,41 @@
+$tabs-height: 48px;
+$theme-color: $white;
+
+.react-tabs [role=tablist] {
+    height: $tabs-height;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.react-tabs [role=tab] {
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    height: $tabs-height;
+    padding: 6px 12px 4px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    color: $theme-color;
+    font-family: 'OpenSans-bold';
+    font-size: 13px;
+    line-height: 2.7em;
+    list-style: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: .8;
+
+    &[aria-selected=true] {
+        border-bottom: 2px solid $theme-color;
+        background: none;
+        color: $theme-color;
+        opacity: 1;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &:focus:after {
+        display: none;
+    }
+}

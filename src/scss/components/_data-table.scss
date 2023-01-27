@@ -1,0 +1,204 @@
+@mixin data-table-header-bg() {
+    height: rem(32);
+    border-top: 1px solid $grey3;
+    border-bottom: 1px solid $grey3;
+    background-color: $grey1;
+}
+
+.data-table {
+    width: 100%;
+    min-width: rem(710);
+
+    &--scrollable {
+        
+        tbody {
+            overflow-y: scroll;
+        }
+
+        thead > tr {
+            &::after {
+                //@extend .data-table-header-bg;
+                @include data-table-header-bg();
+                display: table-cell;
+                padding: 0 7px;
+                content: '';
+            }
+        }
+    }
+}
+
+/* implemented with mixin for excel compatibility */
+@mixin th-td-common() {
+    height: rem(36);
+    padding: rem(8) rem(16) rem(5) rem(16);
+    border-bottom: 1px solid $grey3;
+    //background-color: $white;
+    font-size: rem(13);
+    font-weight: 400;
+    text-align: left;
+    vertical-align: top;
+}
+
+.data-table th {
+    @include th-td-common();
+}
+
+.data-table td {
+    @include th-td-common();
+}
+
+.data-table.fixed-header div.th {
+    @include th-td-common();
+}
+
+/*
+.data-table td,
+.data-table th,
+.data-table.fixed-header div.th {
+    height: rem(36);
+    padding: rem(8) rem(16) rem(5) rem(16);
+    border-bottom: 1px solid $grey3;
+    //background-color: $white;
+    font-size: rem(13);
+    font-weight: 400;
+    text-align: left;
+    vertical-align: top;
+}
+*/
+
+.data-table td {
+    height: rem(32);
+    padding: rem(10) rem(16) rem(7) rem(16);
+}
+
+.data-table-cell {
+    &--no-entries {
+        color: $dark-grey1;
+        text-align: center;
+    }
+
+    &--green {
+        background-color: $report-green;
+    }
+
+    &--red {
+        background-color: $report-red;
+    }
+
+    &--yellow {
+        background-color: $report-yellow;
+    }
+
+    &--orange {
+        background-color: $report-orange;
+    }
+
+    &--high-priority {
+        box-shadow: inset 5px 0 0 -2px $feed-red;
+    }
+
+    &--number {
+        text-align: right !important;
+    }
+}
+
+.data-table-bordered {
+    &--left {
+        border-left: 1px solid $grey3;
+    }
+
+    &--right {
+        border-right: 1px solid $grey3;
+    }
+}
+
+.data-table th {
+    @include data-table-header-bg();
+    /*@extend .data-table-header-bg;*/
+}
+
+.data-table-header {
+    &--big {
+        height: rem(42);
+        padding: rem(18) rem(16) rem(8) rem(16);
+        border-top: 0;
+        background-color: $white;
+        font-size: rem(16);
+        font-weight: 600;
+        line-height: rem(16);
+    }
+
+    &--clickable {
+        cursor: pointer;
+    }
+}
+
+.data-table-highlighted {
+    background-color: $grey2;
+}
+
+.data-table-border-right {
+    border-right: 1px solid $grey5;
+}
+
+@mixin column-width($fraction) {    
+    width: #{$fraction}#{'%'};
+}
+
+$sizes: (
+    col1: 1, col2: 2, col3: 3, col4: 4, col5: 5, col6: 6, col7: 7,
+    col8: 8, col9: 9, col10: 10, col11: 11, col12: 12,
+);
+
+@each $size, $fraction in $sizes {
+    .data-table-column--#{$size} {
+        @include column-width($fraction * 100 / 12);
+    }
+}
+
+
+.table-fixed-header-container {
+    position: relative;
+    /*border: 1px solid #000;*/
+    padding-top: 32px;
+    background: $grey1;
+    height: 100%;
+    border-top: 1px solid $grey3;
+}
+
+.table-fixed-header-container2 {
+    overflow-y: auto;
+    background: $white;
+    height: 100%;
+    border-top: 1px solid $grey3;
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+    box-shadow: inset 0 17px 19px -17px rgba(0, 0, 0, 0.3);
+}
+
+.data-table.fixed-header {
+    th div.th {
+        position: absolute;
+        background: transparent;
+        top: 0;        
+        line-height: normal;
+        color: $dark-grey2;
+        border: 0;
+        /*padding: rem(8) rem(16) rem(5) rem(16);*/
+    }
+
+    th {
+        height: 0;
+        line-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding: 0;
+
+        color: transparent;
+        border: none;
+        white-space: nowrap;
+
+        > span .Select-arrow {
+            display: none;
+        }
+      }
+}

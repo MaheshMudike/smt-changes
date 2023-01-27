@@ -1,0 +1,19 @@
+$z-index: (
+    menu: 100,
+    topbar: 200,
+    content: 300,
+    content-above: 400,
+    modal: 500,
+    dropdown: 600,
+    toast: 1000,
+    overlay: 1100,
+);
+
+@function z-index($key) {
+    @if map-has-key($z-index, $key) {
+        @return map-get($z-index, $key);
+    }
+
+    @warn 'Unknown `#{$key}` in $z-index.';
+    @return null;
+};

@@ -1,0 +1,27 @@
+.info-modal {
+    padding: 21px 24px 15px;
+
+    &__title {
+        margin-bottom: 13px;
+    }
+
+    &__body {
+        color: $dark-grey3;
+        line-height: 1.5;
+    }
+
+    &__button-bar {
+        margin-top: 26px;
+        text-align: right;
+
+        > {
+            .info-modal__button {
+                padding: 7px 27px;
+                color: $light-blue;
+                font-size: .8125rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

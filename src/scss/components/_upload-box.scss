@@ -1,0 +1,9 @@
+.upload-box {
+    height: 200px;
+    border: 1px solid $light-gray-blue;
+    background-color: $grey1;
+
+    &__input {
+        z-index: 1;
+    }
+}

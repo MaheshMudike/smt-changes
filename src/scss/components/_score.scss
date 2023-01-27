@@ -1,0 +1,35 @@
+.score {
+    align-self: stretch;
+    font-family: OpenSans-Bold;
+    text-align: center;
+    overflow: hidden;
+
+    &__value {
+        color: $light-blue;
+        font-size: $font-size--xxxl;
+
+        &--bad {
+            color: $kone-red;
+        }
+
+        &--neutral {
+            color: $dark-grey1;
+        }
+    }
+
+    &__caption {
+        max-width: rem(100);
+        font-size: $font-size--xxxs;
+        text-transform: uppercase;
+    }
+
+    &--inactive {
+        @extend .panel--gray;
+        border: 1px solid $grey4;
+        border-top: 0;
+
+        & + & {
+            border-left: 0;
+        }
+    }
+}

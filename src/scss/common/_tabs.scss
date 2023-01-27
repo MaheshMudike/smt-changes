@@ -1,0 +1,52 @@
+$tabs-transition: .3s ease-out;
+
+.tabs {
+    &__group {
+        display: flex;
+        position: relative;
+        width: 100%;
+        min-height: $size-smaller;
+        font-family: $font-bold;
+        font-size: rem(11);
+        text-align: center;
+        text-transform: uppercase;
+        user-select: none;
+    }
+
+    &__tab {
+        transition: opacity #{$tabs-transition};
+        cursor: pointer;
+
+        &--unselected {
+            opacity: .7;
+        }
+    }
+
+    &__indicator {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        transition: transform #{$tabs-transition};
+        background-color: $light-blue;
+
+        @include rtl() {
+            left: auto;
+            right: 0;
+        }
+
+        @for $i from 1 through 30 {
+            &-#{$i} {
+                @include transform(translateX(#{$i * 100%}));
+            }
+        }
+
+        @for $i from 1 through 30 {
+            &-#{$i} {
+                @include rtl() {
+                    @include transform(translateX(-#{$i * 100%}));
+                }
+            }
+        }
+    }
+}

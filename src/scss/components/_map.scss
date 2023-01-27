@@ -1,0 +1,43 @@
+
+/**
+* The zoomslider in the second map shall be placed between the zoom-in and
+* zoom-out buttons.
+*/
+#openlayers-map .ol-zoom .ol-zoom-out {
+    margin-top: 204px;
+}
+#openlayers-map .ol-zoomslider {
+    background-color: transparent;
+    top: 2.3em;
+}
+
+#openlayers-map .ol-touch .ol-zoom .ol-zoom-out {
+    margin-top: 212px;
+}
+#openlayers-map .ol-touch .ol-zoomslider {
+    top: 2.75em;
+}
+
+#openlayers-map .ol-zoom-in.ol-has-tooltip:hover [role=tooltip],
+#openlayers-map .ol-zoom-in.ol-has-tooltip:focus [role=tooltip] {
+    top: 3px;
+}
+
+#openlayers-map .ol-zoom-out.ol-has-tooltip:hover [role=tooltip],
+#openlayers-map .ol-zoom-out.ol-has-tooltip:focus [role=tooltip] {
+    top: 232px;
+}
+
+#map-legend {
+    left: .5em;
+    bottom: .5em;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    overflow-y: auto;
+    max-height: 40%;
+    max-width: 50%;
+}
+
+#map-legend img {
+    width: 30px;
+}

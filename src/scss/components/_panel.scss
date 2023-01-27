@@ -1,0 +1,13 @@
+.panel {
+    &--gray {
+        background-color: $grey2;
+    }
+
+    &--light-gray {
+        background-color: $grey1;
+    }
+
+    &--white {
+        background-color: $white;
+    }
+}

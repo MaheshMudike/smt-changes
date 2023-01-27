@@ -1,0 +1,12 @@
+.filter-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    color: $dark-grey1;
+    font-size: $font-size--xs;
+    font-weight: 600;
+    line-height: 1;
+    text-align: left;
+    box-shadow: inset 1px -1px 0 0 $grid-grey;
+}

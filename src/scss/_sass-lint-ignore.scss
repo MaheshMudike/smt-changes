@@ -1,0 +1,13 @@
+/*
+
+The reason for this file is the fact that it's not possible to ignore only a single line using sass-lint.
+That's why we have this file that is ignored by the linting task in Gulp.
+
+http://stackoverflow.com/questions/35136098/have-sass-lint-ignore-a-certain-line
+
+*/
+
+
+.feed-list {
+    -webkit-overflow-scrolling: touch;
+}

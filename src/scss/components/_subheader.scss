@@ -1,0 +1,37 @@
+.subheader {
+    display: block;
+    height: rem(40);
+    padding: 0 $padding-std;
+    background-color: $grey1;
+    color: $light-blue;
+    font-family: OpenSans-Bold;
+    font-size: $font-size--xs;
+    line-height: rem(40);
+
+    &--alert {
+        color: $feed-red;
+    }
+
+    &--auto-height {
+        height: auto;
+        line-height: auto;
+    }
+
+    @mixin sm {
+        @media (max-width: #{$screen-sm-min}) {
+            @content;
+        }
+     }
+
+    @include sm{
+        font-size: $font-size--xxxs
+    }
+
+
+    //added to make same height as list items
+    /*
+    line-height: $size-standard;
+    height: $size-standard;
+    font-size: $font-size--m;
+    */
+}

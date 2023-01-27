@@ -1,0 +1,11 @@
+.foreground-panel {
+    width: 392px;
+
+    &__title {
+        color: $medium-blue;
+    }
+
+    &__body {
+        line-height: $line-height-increased;
+    }
+}

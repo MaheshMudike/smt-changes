@@ -1,0 +1,25 @@
+.rich-list-item {
+    $icons-panel-width: rem(36);
+
+    /* don't understand why this was done like this, have replaced with border-bottom
+    background-color: $grey3;
+    box-shadow: inset $icons-panel-width #{$size-standard - rem(1)} 0 0 $white;
+    
+    &:last-child {
+        box-shadow: inset 0 #{$size-standard - rem(1)} 0 0 $white;
+    }
+    */
+    background-color: white;
+    border-bottom: 1px solid $grey3;
+
+    &__content {
+        min-height: $size-standard;
+        padding-right: $padding-small;
+        padding-top: $padding-smallest;
+        padding-bottom: $padding-smallest;
+    }
+
+    &__icons-panel {
+        width: $icons-panel-width;
+    }
+}

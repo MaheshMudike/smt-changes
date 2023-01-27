@@ -1,0 +1,106 @@
+// Grid
+$grid-wrap-width: 960px;
+$grid-columns: 12;
+$grid-gutter-width: 16px !default;
+
+// Typography
+$typo-line-height: 1.5;
+$typo-font-size: 16px;
+
+// RWD
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$container-tablet: (720px + $grid-gutter-width) !default;
+$container-sm: $container-tablet !default;
+
+$container-desktop: (940px + $grid-gutter-width) !default;
+$container-md: $container-desktop !default;
+
+$container-large-desktop: (1140px + $grid-gutter-width) !default;
+$container-lg: $container-large-desktop !default;
+
+// Animations
+$easing-in: cubic-bezier(.54, .11, .9, .62);
+$easing-in-out: cubic-bezier(.41, .1, .41, .98);
+$easing-out: cubic-bezier(.06, .31, .4, 1.01);
+
+// Colors
+$dark-grey1: #969899;
+$dark-grey2: #646566;
+$dark-grey3: #4b4c4d;
+$dark-grey4: #323232;
+$white: #fff;
+$black: #000;
+$grey1: #f7f9fa;
+$grey2: #f0f1f2;
+$grey3: #ebeced;
+$grey4: #d9dadb;
+$grey5: #cacbcc;
+$grey5-20: rgba($grey5, .2);
+$grey5-95: rgba($grey5, .9);
+$menu-shadow: rgba(75, 76, 77, .1);
+$light-gray-blue: #8cb3cd;
+$light-blue: #0280d0;
+$medium-blue: #0164a5;
+$dark-blue: #004b7b;
+$grey-blue: #688699;
+$blue-gray: #8cb3cc;
+$kone-red: #ed2324;
+$grid-grey: #dee0e0;
+$feed-red: #c11b1b;
+$report-green: #bee7d3;
+$report-orange: #f1d8bf;
+$report-yellow: #eaf0bf;
+$report-red: #f6babc;
+
+$patterns-blue: #dce7ee;
+$navy-blue: #0274bf;
+
+$blue-gradient: linear-gradient(to bottom, $light-blue, $medium-blue);
+
+$size-smallest: rem(4);
+$size-tiny: rem(8);
+$size-detail: rem(16);
+$size-small: rem(24);
+$size-smaller: rem(48);
+$size-standard: rem(56);
+$size-larger: rem(60);
+$size-large: rem(64);
+
+// Layout
+$modal-topbar-height: rem(56);
+$modal-topbar-title-alignment: $size-larger;
+
+$menu-width: $size-large;
+$menu-width-open: rem(224);
+$menu-item-height: $size-standard;
+
+$topbar-height: $size-large;
+$toolbar-height: $size-smaller;
+
+$padding-large: rem(20);
+$padding-std: $size-detail;
+$padding-decreased: rem(12);
+$padding-small: $size-tiny;
+$padding-smallest: $size-smallest;
+
+$font-bold: OpenSans-Bold, sans-serif;
+
+$font-size--xxxl: rem(26);
+$font-size--xxl: rem(20);
+$font-size--xl: rem(18);
+$font-size--l: rem(16);
+$font-size--m: rem(16);
+$font-size--s: rem(14);
+$font-size--xs: rem(13);
+$font-size--xxs: rem(12);
+$font-size--xxxs: rem(11);
+$font-size--tiny: rem(10);
+$font-size--tinier: rem(9);
+
+$line-height-increased: 22/14;
+
+$field-height: $size-smaller;
+$field-line-height: $size-small;

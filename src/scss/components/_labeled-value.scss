@@ -1,0 +1,26 @@
+.labeled-value {
+    min-height: $size-larger;
+    padding-left: $padding-std;
+
+    @include rtl() {
+        padding-left: 0;
+        padding-right: $padding-std;
+    }
+
+    &__label {
+        color: $dark-grey1;
+        font-size: rem(12);
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__value {
+        color: $dark-grey2;
+        font-size: rem(14);
+        white-space: pre-wrap;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

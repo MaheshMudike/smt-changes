@@ -1,0 +1,29 @@
+.check-button__container {
+    flex: 0 0 auto;
+}
+
+.check-button {
+    @include square($size-detail);
+    display: block;
+    position: relative;
+    margin: auto;
+    border: 1px solid $dark-grey1;
+    border-radius: $size-detail / 2;
+
+    &--checked {
+        border-color: $light-blue;
+        background-color: $light-blue;
+
+        &::after {
+            @include size(12px, 5px);
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: rotate(-45deg);
+            transform-origin: left bottom;
+            border-bottom: 2px solid $white;
+            border-left: 2px solid $white;
+            content: '';
+        }
+    }
+}

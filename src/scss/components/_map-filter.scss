@@ -1,0 +1,10 @@
+.map-filter {
+    position: relative;
+    overflow: auto;
+    z-index: z-index(content);
+
+    &__tabs {
+        min-width: rem(570);
+        max-width: rem(620);
+    }
+}

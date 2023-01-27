@@ -1,0 +1,63 @@
+.checkbox {
+    @include checkable-input;
+
+    padding-right: $checkable-label-padding;
+    line-height: $checkable-input-size;
+
+    > input {
+        &:checked {
+            ~ label::before {
+                background-color: $checkable-color;
+            }
+
+            ~ label::after {
+                transform: translate(0, -7px) scale(1) rotate(45deg);
+                opacity: 1;
+            }
+        }
+    }
+
+    > label {
+        &::before {
+            border-radius: 1.5 * $checkable-input-border;
+        }
+
+        &::after {
+            top: 50%;
+            right: 6px;
+            width: 7px;
+            height: 12px;
+            transform: translate(0, -7px) rotate(180deg);
+            border: $checkable-input-border solid $white;
+            border-top: 0;
+            border-left: 0;
+            opacity: 0;
+        }
+    }
+
+    &--left {
+        padding-right: 0;
+        padding-left: $checkable-label-padding;
+
+        > label {
+            &::before {
+                right: auto;
+                left: 0;
+            }
+
+            &::after {
+                right: auto;
+                left: 6px;
+            }
+        }
+
+        &--inline-block {
+            display: inline-block;
+            margin-right: $checkable-label-padding;
+        }
+    }
+
+    &--left--decreased {
+        padding-left: $checkable-label-padding / 2;
+    }
+}

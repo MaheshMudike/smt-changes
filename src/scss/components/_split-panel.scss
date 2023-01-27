@@ -1,0 +1,27 @@
+$split-panel-z-index: z-index(content-above);
+
+.split-panel {
+    &__container-full {
+        display: flex;
+        position: absolute;
+        top: -($topbar-height);
+        right: 0;
+        flex-direction: column;
+        min-height: 100vh;
+        box-sizing: border-box;
+
+        @include rtl() {
+            left: 0;
+            right: auto;
+        }
+
+    }
+
+    &--side-above {
+        z-index: $split-panel-z-index;
+    }
+}
+
+.above-split-panel {
+    z-index: $split-panel-z-index + 1;
+}

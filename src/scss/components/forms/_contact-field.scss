@@ -1,0 +1,11 @@
+.contact-field {
+    @extend .text--text-field-normal;
+    line-height: $field-line-height  + $size-tiny;
+
+    &--item {
+        display: inline-block;
+        border-radius: 2px;
+        background-color: $grey3;
+        line-height: $field-line-height;
+    }
+}

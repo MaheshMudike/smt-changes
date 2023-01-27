@@ -1,0 +1,97 @@
+$button-shadow: rgba(26, 25, 24, .24);
+$size-small-fab: rem(44);
+
+@mixin fab-z-index($offset: 0) {
+    z-index: z-index(content) + $offset;
+}
+
+.fab-button {
+    @include fab-z-index;
+
+    /* for fontawesome icons*/
+    color: $white;
+    font-size: $font-size--xl;
+
+    width: $size-standard;
+    height: $size-standard;
+    transition: transform .3s;
+    border-radius: 50%;
+    background-color: $dark-blue;
+    box-shadow: 0 2px 2px 0 $button-shadow;
+
+    &--crossing-line {
+        position: absolute;
+        //modal is above content-above which is the z-index for the spinner     
+        z-index: z-index(modal);
+        right: 0;
+        bottom: 0;
+        margin: 0 $size-detail;
+        transform: translate(0, 30%);
+
+        @include rtl() {
+            left: 0;
+            right: auto;
+        }
+    }
+
+    &--crossing-line-20 {
+        transform: translate(0, 20%);
+    }
+
+    &--rotated {
+        transform: rotate(45deg);
+    }
+
+    &--small {
+        width: $size-small-fab;
+        height: $size-small-fab;
+    }
+
+    &__icon {
+        position: absolute;
+        transform: translate(-50%, -50%);
+
+        @include rtl() {
+            transform: translate(50%, -50%);
+        }
+    }
+}
+
+.fab-menu {
+    @include fab-z-index;
+
+    &__item {
+        @include fab-z-index(-1);
+
+        position: absolute;
+        left: 50%;
+        margin-left: -.5 * $size-small-fab;
+        transform: scale(.1);
+
+        @for $i from 1 through 11 {
+            &--shown-#{$i} {
+                transform: scale(1) translate(0, -$i * ($size-small-fab + rem(10)));
+            }
+        }
+    }
+}
+
+.fab-menu-dropdown {
+    @include fab-z-index;
+    top: -13px;
+
+    &__item {
+        @include fab-z-index(-1);
+
+        position: absolute;
+        left: 50%;
+        margin-left: -.5 * $size-small-fab;
+        transform: scale(.1);
+
+        @for $i from 1 through 11 {
+            &--shown-#{$i} {
+                transform: scale(1) translate(0, $i * ($size-small-fab + rem(10)) + rem(10));
+            }
+        }
+    }
+}

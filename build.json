@@ -1,0 +1,13 @@
+{
+    "android": {
+        "debug": {
+        },
+        "release": {
+            "keystore": "key/ProductionKey",
+            "storePassword": "Prodstore",
+            "alias": "ProductionKey",
+            "password" : "Prodkey",
+            "keystoreType": ""
+        }
+    }
+}

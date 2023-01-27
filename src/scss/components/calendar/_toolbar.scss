@@ -1,0 +1,84 @@
+@mixin reset-toolbar-elem {
+    margin: 0;
+    float: none;
+
+    > * {
+        margin: 0;
+        float: none;
+    }
+}
+
+.fc-toolbar {
+    $toolbar-height: 48px;
+
+    display: flex;
+    flex-shrink: 0;
+    height: $toolbar-height;
+    margin-bottom: 0;
+    background-color: $grey2;
+    box-shadow: inset 0 -1px 0 0 $grey4;
+    box-sizing: border-box;
+
+    .fc-state-default {
+        color: $dark-grey2;
+        box-shadow: none;
+    }
+
+    .fc-state-active {
+        color: $dark-blue;
+        box-shadow: inset 0 -2px 0 0 $light-blue;
+    }
+
+    .fc-left {
+        @include reset-toolbar-elem;
+
+        flex-shrink: 0;
+        order: 1;
+    }
+
+    .fc-right {
+        @include reset-toolbar-elem;
+
+        flex-shrink: 0;
+        order: 3;
+
+        > .fc-button {
+            padding: 0 rem(10);
+        }
+    }
+
+    .fc-center {
+        @include reset-toolbar-elem;
+
+        display: block;
+        flex-grow: 1;
+        flex-shrink: 1;
+        order: 2;
+
+        > h2 {
+            padding: 0;
+            color: $dark-blue;
+            font-family: 'OpenSans-Bold';
+            font-size: $font-size--xs;
+            line-height: $toolbar-height;
+            text-transform: uppercase;
+        }
+    }
+
+    .fc-button {
+        height: $toolbar-height;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        background: none;
+        font-family: OpenSans-Bold;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+
+    .fc-icon {
+        top: 0;
+        margin: 0;
+    }
+}
+

@@ -1,0 +1,19 @@
+.icon-button {
+    width: 24px;
+    height: 24px;
+    border-color: transparent;
+    background-color: transparent;
+    display: list-item;
+    /*opacity: .7;*/
+    /* for fontawesome */
+    color: $white;
+    font-size: $font-size--xxl;
+
+    &--disabled {
+        opacity: .3;
+    }
+
+    > svg {
+        margin: auto;
+    }
+}

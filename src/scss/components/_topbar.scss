@@ -1,0 +1,55 @@
+.topbar {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: $topbar-height;
+    background-color: $light-blue;
+    color: $white;
+    z-index: z-index(topbar);
+
+    &__panel {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__menu-btn {
+        padding: 20px;
+    }
+
+    &__title {
+        padding-left: 8px;
+        font-family: 'OpenSans-Bold';
+        font-size: 1.125rem;
+
+        @include rtl() {
+            padding-right: 8px;
+            padding-left: 0;
+        }
+    }
+
+    &__separator {
+        border-right: 1px solid $medium-blue;
+        @include rtl() {
+            border-right: 0;
+            border-left: 1px solid $medium-blue;
+        }
+    }
+
+    &__dropdown {
+        min-width: 250px;
+        margin-left: auto;
+        line-height: initial;
+
+        .Select-placeholder,
+        .Select-value-label,
+        input {
+            color: $white;
+        }
+
+        .Select-arrow {
+            border-color: $white transparent transparent;
+        }
+    }
+}
+
+

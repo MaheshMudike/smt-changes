@@ -1,0 +1,41 @@
+.login {
+
+    &__background {
+        height: 100%;
+        text-align: center;
+    }
+
+    &__container {
+        position: relative;
+        top: 25%;
+        height: 75%;
+        color: $white;
+    }
+
+    &__title {
+        padding-top: 20px;
+        text-transform: uppercase;
+    }
+
+    &__details {
+        position: relative;
+        top: 10%;
+        width: 23.04%;
+        min-width: 300px;
+        margin: 0 auto 4.5rem;
+        font-size: $font-size--s;
+        font-weight: 300;
+    }
+
+    &__error {
+        width: 60%;
+        text-align: left;
+        margin: 0 auto;
+        font-size: $font-size--s;
+        font-weight: 300;
+        max-height: 40vh;
+        overflow-y: auto;
+        word-break: break-word;
+        max-width: 700px;
+    }
+}

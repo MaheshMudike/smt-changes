@@ -1,0 +1,11 @@
+.badge {
+    display: inline-block;
+    min-width: rem(20);
+    border-radius: 2px;
+    background-color: $grey-blue;
+    color: $white;
+    font-family: OpenSans-Bold;
+    font-size: rem(9);
+    line-height: rem(20);
+    text-align: center;
+}

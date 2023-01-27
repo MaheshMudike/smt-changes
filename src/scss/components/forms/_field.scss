@@ -1,0 +1,8 @@
+.field {
+    @extend .text--text-field-normal;
+
+    width: 100%;
+    height: $field-height;
+    padding: 0 $padding-std;
+    line-height: $field-line-height;
+}

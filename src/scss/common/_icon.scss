@@ -1,0 +1,57 @@
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    &--small {
+        width: 16px;
+        height: 16px;
+    }
+
+    &--logo {
+        width: 85px;
+        height: 44px;
+    }
+
+    &--large {
+        width: 48px;
+        height: 48px;
+    }
+
+    &--massive {
+        width: 120px;
+        height: 120px;
+    }
+
+    &--logo-blue {
+        width: 62px;
+        height: 32px;
+    }
+}
+
+.icon-big {
+    width: 44px;
+    height: 44px;
+}
+
+.icon-oriented {
+    @include rtl() {
+        @include transform(scaleX(-1))
+    }
+}
+
+.icon-container {
+    padding: $padding-decreased $padding-decreased $padding-decreased $padding-large;
+
+    @include rtl() {
+        padding: $padding-decreased  $padding-large $padding-decreased $padding-decreased;
+    }
+}
+
+.icon-dimensions-font-awesome {
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    text-align: center;
+    color: #969899;
+}

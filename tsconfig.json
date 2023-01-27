@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "outDir": "build/dist",
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6","dom"],
+    //"lib": ["es5", "dom", "es2015.collection", "es2015.promise"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    //"rootDir": "src",   removed this because webpack was confused
+		
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    //"strictNullChecks": true,
+    "strictNullChecks": false,
+    "suppressImplicitAnyIndexErrors": true,
+    //"noUnusedLocals": true
+    "noUnusedLocals": false,
+
+    "baseUrl": "./"   
+  },
+  "include": [
+    "src/**/*",
+    "plugins/**/*"    
+  ],
+  "exclude": [
+	  "overrides",
+    "node_modules",    
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",	
+    "jest",
+    "src/setupTests.ts"
+  ]
+}

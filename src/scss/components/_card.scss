@@ -1,0 +1,15 @@
+.card {
+    &__content {
+        @extend .shadow--std;
+        border-radius: 2px;
+        background-color: $white;
+    }
+
+    &--std {
+        padding: $padding-std;
+
+        & + & {
+            padding-top: 0;
+        }
+    }
+}

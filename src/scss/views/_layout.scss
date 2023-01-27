@@ -1,0 +1,213 @@
+.main-container {
+    @extend .full-size;
+
+    &__content {
+        position: absolute;
+        top: $topbar-height;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin-right: $menu-width;
+        transform: translateX($menu-width);
+        transition: transform .3s ease;
+        z-index: z-index(content);
+
+        @include rtl() {
+            transform: translateX(-$menu-width);
+            margin-left: $menu-width;
+            margin-right: initial;
+        }
+    }
+}
+
+
+
+.content {
+    @extend .full-height;
+
+    border-right: 1px solid $grid-grey;
+    background-color: $grey2;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &__container {
+        height: 100%;
+    }
+}
+
+.container {
+    &--centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--vertical {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &--horizontal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &--justify-start {
+        justify-content: flex-start;
+    }
+
+    &--inversed {
+        justify-content: flex-end;
+    }
+
+    &--align-start {
+        align-items: flex-start;
+    }
+
+    &--oposite {
+        justify-content: space-between;
+    }
+
+    &--truncate {
+        min-width: 0;
+    }
+
+    &__item {
+        &--centered {
+            align-self: center;
+        }
+
+        &--stretch {
+            align-self: stretch;
+        }
+    }
+}
+
+.flex-grow--1 {
+    flex-grow: 1;
+}
+
+.flex-shrink--0 {
+    flex-shrink: 0;
+}
+
+.flex--1 {
+    flex: 1;
+}
+
+.cover-all {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.top-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.bottom-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+/*
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+*/
+
+.half-width {
+    width: 50%;
+}
+
+.padding-left {
+    &--std {
+        padding-left: $padding-std;
+    }
+}
+
+$sides: (
+    top: horizontal,
+    bottom: horizontal,
+    right: vertical,
+    left: vertical,
+);
+
+$sizes: (
+    large: $padding-large,
+    std: $padding-std,
+    decreased: $padding-decreased,
+    small: $padding-small,
+    smallest: $padding-smallest,
+);
+
+@each $side, $orientation in $sides {
+    @each $size-name, $size in $sizes {
+        .padding,
+        .padding-#{$side},
+        .padding-#{$orientation} {
+            &--#{$size-name} {
+                $padding-side: 'padding-#{$side}'; // this variable is there to cheat sass-lint
+                #{$padding-side}: $size;
+            }
+        }
+
+        .margin,
+        .margin-#{$side},
+        .margin-#{$orientation} {
+            &--#{$size-name} {
+                $margin-side: 'margin-#{$side}'; // this variable is there to cheat sass-lint
+                #{$margin-side}: $size;
+            }
+        }
+    }
+}
+
+.margin-left--auto {
+    margin-left: auto;
+}
+
+/* "ltr support" for bootstrap 3 */ 
+@mixin rtl-grid-columns($class, $i: 1) {
+    @for $i from (1 + 1) through $grid-columns {
+        .col-#{$class}-#{$i} {
+            @include rtl() {
+                float: right;
+            }
+        }
+    }
+}
+
+@include rtl-grid-columns(xs);
+@include rtl-grid-columns(sm);
+@include rtl-grid-columns(md);
+@include rtl-grid-columns(lg);

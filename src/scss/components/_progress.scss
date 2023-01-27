@@ -1,0 +1,16 @@
+$progress-color: #0164a5;
+
+.progressbar {
+    width: $size-smaller;
+    height: $size-smaller;
+
+    &__label {
+        color: $progress-color !important;
+        font-size: $font-size--xl;
+        font-weight: 600;
+    }
+}
+
+.progress-chart {
+    margin-bottom: 19px;
+}

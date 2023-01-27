@@ -1,0 +1,63 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.overview-container {
+    margin-bottom: 16px;
+    border-radius: 2px;
+    background-color: $white;
+    box-shadow: 0 1px 2px 0 $grey5;
+
+    animation-name: fade-in;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: .5s;
+
+    &__title {
+        height: 3rem;
+        color: $dark-blue;
+        font-family: 'OpenSans-Bold';
+        font-size: .8125rem;
+        letter-spacing: .3px;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    &__body {
+        position: relative;
+        overflow: visible;
+
+        &:before,
+        &:after {
+            display: block;
+            position: absolute;
+            background-color: $white;
+            content: ' ';
+            z-index: z-index(content);
+        }
+
+        &:before {
+            top: 0;
+            right: -1px;
+            bottom: 0;
+            width: 1px;
+        }
+
+        &:after {
+            right: 0;
+            bottom: -1px;
+            left: 0;
+            height: 1px;
+        }
+    }
+}
+
+.overview-container:last-of-type {
+    margin-bottom: 0;
+}

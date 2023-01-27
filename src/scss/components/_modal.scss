@@ -1,0 +1,158 @@
+$transparent-grey4: rgba(217, 218, 219, .8);
+$transparent-black1: rgba($black, .15);
+$transparent-black2: rgba($black, .11);
+
+.modal-dialog {
+    position: absolute;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: 672px;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+
+    outline: none;
+    background-color: $white;
+    box-shadow: 0 24px 24px 0 $transparent-black1, 0 0 24px 0 $transparent-black2;
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $transparent-grey4;
+        z-index: z-index(modal);
+
+        &--transparent {
+            background-color: transparent;
+        }
+    }
+
+    &__topbar {
+        padding: 1rem;
+        background-color: $light-blue;
+        color: $white;
+        font-family: OpenSans-bold;
+
+        span,
+        img {
+            vertical-align: middle;
+        }
+
+        &-title-wrapper {
+            padding: 1rem 0 0 3.5rem;
+        }
+
+        &-title {
+            display: inline-block;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            vertical-align: middle;
+        }
+
+        &-btn {
+            height: 34px;
+            margin-right: rem(32);
+            color: inherit;
+            font-family: OpenSans-Semibold;
+            font-size: .875rem;
+            line-height: 1.5rem;
+            text-transform: uppercase;
+
+            @include rtl() {
+                margin-right: 0;
+                margin-left: rem(32);
+            }
+        }
+
+        &-btn--disabled {
+            cursor: auto;
+            opacity: .5;
+        }
+
+        &-actions {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 6px 10px 0 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        &-additional-action-btn {
+            margin-left: 24px;
+            color: $white;
+            font-family: OpenSans-Semibold;
+            font-size: .875rem;
+            line-height: 1.5rem;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            &--right {
+                margin-right: 0;
+                float: right;
+            }
+
+        }
+
+        &-additional-action-btn--text {
+            margin-top: 6px;
+        }
+
+        &-additional-action-btn:first-child {
+            margin-left: 0;
+        }
+
+        &--right {
+            margin-right: 0;
+            float: right;
+        }
+    }
+
+    &--hidden {
+        visibility: hidden;
+    }
+
+    &__body {
+        overflow: auto;
+
+        &--no-scrollable {
+            overflow: hidden;
+        }
+    }
+
+    &__button-bar {
+        @extend .row-tight;
+        display: flex;
+        justify-content: flex-end;
+        padding: rem(8);
+
+        &--clear {
+            padding: 0 16px 16px;
+            border-top: 0;
+        }
+    }
+
+    &__container {
+        height: 90vh;
+    }
+
+    &--flexible {
+        .modal-dialog__container {
+            height: auto;
+        }
+
+        .modal-dialog__body {
+            display: flex;
+            position: static;
+            flex-direction: column;
+            max-height: 90vh;;
+        }
+    }
+
+    &--size-narrow {
+        width: 392px;
+    }
+}

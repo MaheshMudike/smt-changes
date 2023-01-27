@@ -1,0 +1,19 @@
+.link-wrapper {
+    cursor: pointer;
+
+    &--full-width {
+        width: 100%;
+        text-align: start;
+    }
+
+    &__icon {
+        top: 18px;
+        right: 16px;
+
+        @include rtl() {
+            right: auto;
+            left: 16px;
+            @include transform(scaleX(-1));
+        }
+    }
+}

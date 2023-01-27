@@ -1,0 +1,31 @@
+import translate from '../utils/translate';
+
+//TODO function can be removed
+export const toastMessages = () => ({
+    AUTHENTICATION_FAILED: translate('toast.auth-failed.message'),
+    CALENDAR_CREATE_PLACEHOLDER_FAILED: translate('toast.calendar-create-failed.message'),
+    CALENDAR_REMOVE_PLACEHOLDER_FAILED: translate('toast.calendar-remove-failed.message'),
+    CALENDAR_SYNCHRONIZE_FAILED: translate('toast.calendar-sync-failed.message'),
+    EVENT_SCHEDULE_SAVED: translate('toast.event-created-successful.message'),
+    EVENT_SCHEDULE_SAVED_FAILED: translate('toast.event-created-failed.message'),
+    GEOLOCATION_FAILED: translate('toast.geo-location-failed.message'),
+    GEO_FILTER_BOUNDS_FAILED: translate('toast.geo-filter-failed.message'),
+    INVALID_COMPANY_SETTINGS: translate('toast.invalid-company-settings.message'),
+    LOAD_PICTURE_FAILED: translate('toast.load-picture-failed.message'),
+    LOAD_SF_ACCOUNTS_FAILED: translate('toast.sf-accounts-failed.message'),
+    LOAD_SF_ACCOUNT_CONTACTS_FAILED: translate('toast.sf-accounts-contacts-failed.message'),
+    LOAD_SF_ACCOUNT_FAILED: translate('toast.sf-account-failed.message'),
+    LOAD_SF_CONTACTS_FAILED: translate('toast.sf-contacts-failed.message'),
+    LOAD_SF_EQUIPMENT_FAILED: translate('toast.equipment-failed.message'),
+    LOAD_SF_JOB_FUNCTIONS_FAILED: translate('toast.sf-job-functions-failed.message'),
+    MARK_EVENT_COMPLETED_FAILED: translate('toast.mark-event-completed-failed.message'),
+    MEETING_SCHEDULE_RESOLVED: translate('toast.meeting-resolved.message'),
+    MEETING_SCHEDULE_SAVED: translate('toast.meeting-created.message'),
+    MEETING_SCHEDULE_SAVED_FAILED: translate('toast.meeting-failed.message'),
+    OPEN_EXTERNAL_APP_FAILED: translate('toast.open-external-app-failed.message'),
+    REGISTER_DEVICE_FAILED: translate('toast.register-device-failed.message'),
+    TAKE_PICTURE_FAILED: translate('toast.take-picture-failed.message'),
+    TRACKING_REPORT_NOT_FOUND: translate('toast.tracking-report-not-found.message'),
+    NOTIFICATION_RULES_SAVED: translate('toast.notification-rules-created-successful.message'),
+    NOTIFICATION_RULES_SAVED_FAILED: translate('toast.otification-rules-created-failed.message'),
+});

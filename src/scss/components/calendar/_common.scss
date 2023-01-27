@@ -1,0 +1,172 @@
+.calendar-wrapper {
+    color: $dark-grey1;
+
+    .fc {
+        display: flex;
+        flex-direction: column;
+        /*height: 100%;*/
+        font-family: 'Open Sans';
+        font-size: 13px;
+
+        & th,
+        & thead > tr > td {
+            border: 0;
+        }
+    }
+}
+
+.fc-title {
+    color: $dark-grey2;
+    font-family: OpenSans-Semibold;
+}
+
+.fc-view-container {
+    background-color: $grey1;
+    overflow: auto;
+}
+
+.fc-event {
+    margin: 1px;
+    padding: rem(8) rem(16);
+    border: 0;
+    border-radius: 2px;
+    background-color: $grey1;
+    color: inherit;
+    font-size: $font-size--xs;
+
+    &:hover {
+        color: inherit;
+        cursor: pointer;
+    }
+
+    .fc-bg {
+        background-color: $blue-gray;
+        opacity: .25;
+    }
+
+    &--completed {
+        .fc-bg {
+            opacity: .1;
+        }
+    }
+
+    &--week {
+        padding: rem(5) rem(8);
+        font-size: $font-size--xxxs;
+    }
+}
+
+.fc-syncing {
+    opacity: .6;
+}
+
+.fc-content-skeleton {
+    pointer-events: none;
+}
+
+.fc-now-indicator-arrow {
+    display: none;
+}
+
+.fc-now-indicator-line {
+    border-color: $light-blue;
+}
+
+.fc-axis.fc-axis {
+    text-align: left;
+    vertical-align: top;
+}
+
+.fc-day-header,
+.fc-axis {
+    color: $dark-grey2;
+    font-size: $font-size--xxxs;
+}
+
+.fc-agenda-view {
+    .fc-day-grid {
+        display: none;
+    }
+}
+
+// Icons (overwrite)
+// -----------------------------------------------------------------------------
+.fc-icon {
+    width: 24px;
+    height: 24px;
+
+    &:after {
+        content: '';
+    }
+}
+
+.fc-icon-left-single-arrow {
+    //fill="#969899"
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 16.6L14.6 18l-6-6 6-6L16 7.4 11.4 12z" fill="%23969899" fill-rule="evenodd"/></svg>');
+}
+
+.fc-icon-right-single-arrow {
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.6 7.4L10 6l6 6-6 6-1.4-1.4 4.6-4.6z" fill="%23969899" fill-rule="evenodd"/></svg>');
+}
+
+.fc-icon.fc-icon-x {
+    &:after {
+        content: '\000D7';
+    }
+}
+
+.fc-time-grid {
+    tbody,
+    td {
+        border: 0;
+    }
+
+    tr {
+        height: $size-standard;
+    }
+
+    > .fc-slats {
+        tr {
+            border-top: 1px solid $grey3;
+
+            & :first-child {
+                border-top: 0;
+            }
+        }
+    }
+
+    .fc-event-container.fc-event-container {
+        margin: 0;
+        pointer-events: auto;
+    }
+}
+
+.fc-body {
+    > tr {
+        > td {
+            border: 0;
+        }
+    }
+}
+
+.fc-ltr .fc-h-event.fc-not-start,
+.fc-rtl .fc-h-event.fc-not-end {
+    margin-right: 1.4rem;
+    margin-left: .4rem;
+    padding: .5rem 1rem;
+}
+
+.fc-widget-header {
+    th {
+        > span {
+            color: $dark-grey1;
+            line-height: rem(40);
+        }
+    }
+}
+
+.fc-divider.fc-divider {
+    padding: 0;
+    border-top: 0;
+    border-color: $grey4;
+}

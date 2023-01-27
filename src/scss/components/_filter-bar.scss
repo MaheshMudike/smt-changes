@@ -1,0 +1,30 @@
+.filter-bar {
+    &--bottom {
+        .filter-bar__button {
+            position: relative;
+            &--active {
+                border-top-color: transparent;
+                border-bottom-color: $grey4;
+            }
+        }
+    }
+
+    &__button {
+        min-height: $size-smaller;
+        border: 1px solid $grey4;
+        border-right: 0;
+        background-color: $grey2;
+
+        color: $dark-grey2;
+        font-family: OpenSans-Bold;
+
+        &--active {
+            border-bottom-color: transparent;
+            background-color: $white;
+        }
+
+        &:first-child {
+            border-left: 0;
+        }
+    }
+}

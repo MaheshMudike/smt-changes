@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "503556688827",
+    "firebase_url": "https://smt3-prod.firebaseio.com",
+    "project_id": "smt3-prod",
+    "storage_bucket": "smt3-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503556688827:android:3dcd7b329a872ff5d1529e",
+        "android_client_info": {
+          "package_name": "com.fluido.konesmt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503556688827-jpiv6b6vkjkukrrffe1j762eoamfbr1f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fluido.konesmt",
+            "certificate_hash": "decea1c2bc5f40886f5b48e5393c3a70b1aea51b"
+          }
+        },
+        {
+          "client_id": "503556688827-17ivrm5th6t3ht6juasp2544nb7vo8p7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiZYMm0Er_aHEqnJ8pvoLTE1i0r1E203Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503556688827-17ivrm5th6t3ht6juasp2544nb7vo8p7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

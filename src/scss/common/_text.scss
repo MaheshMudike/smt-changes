@@ -1,0 +1,21 @@
+.text {
+    &--left-menu-selected {
+        color: $dark-grey3;
+        font-size: $font-size--xs;
+    }
+
+    &--text-field-normal {
+        color: $dark-grey2;
+        font-size: $font-size--s;
+    }
+
+    &--placeholder {
+        color: $dark-grey1;
+        font-size: $font-size--s;
+    }
+
+    &--big-header {
+        color: $dark-grey2;
+        font-size: $font-size--xxl;
+    }
+}
